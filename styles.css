@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Alegaza';
+    src: url('./assets/Fonts/ALFONT_COM_خط-الاجازة.TTF');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alegaza', sans-serif; /* Use the custom font */
+    color: #024d62;
+    text-align: end;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+body{
+    background: url(./assets/images/raimond-klavins-030ZIU1Rook-unsplash.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container{
+    backdrop-filter: blur(35px);
+    width: 70%;
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+    padding: 20px 12px;
+    text-align: end;
+}
+.form-heading{
+    height: 54px;
+    border-bottom: 2px solid #ddd;
+    margin: 0px 10px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+}
+.apel-logo {
+    height: 193%;
+    margin-top: -16px;
+}
+form{
+    margin-top: 10px;
+    padding: 25px;
+    font-size: 25px;
+}
+.container label{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0px 0px 10px 0px;
+}
+
+.container label > span{
+width: 30%;
+font-weight: bold;
+float: left;
+padding-top: 8px;
+padding-right: 5px;
+text-align: end;
+}
+.container span.required{
+color:red;
+}
+.container .year-number-field{
+width: 60px;
+text-align: center;
+}
+.container input.input-field, .container .select-field{
+width: 48%;
+font-size: 18px;
+}
+.container input.input-field,
+.container .year-number-field,
+.container .textarea-field,
+.container .select-field{
+border: 1px solid #C2C2C2;
+box-shadow: 1px 1px 4px #EBEBEB;
+border-radius: 3px;
+padding: 7px;
+outline: none;
+}
+.container .input-field:focus,
+.container .year-number-field:focus,
+.container .textarea-field:focus, 
+.container .select-field:focus{
+border: 1px solid #e6931d;
+}
+
+
+.feedback1 , .feedback2, .feedback3, .feedback4 {
+    display: none;
+    background-color: #0ea3b2;
+    width: auto;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+.show {
+    display: block;
+}
+
+
+.container input[type=submit],
+.container input[type=button]{
+border: none;
+width: 100px;
+text-align: end;
+padding: 8px 15px 8px 15px;
+background: url('./assets/images/favicon.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+font-weight: bolder;
+font-size: 20px;
+box-shadow: 1px 1px 4px #DADADA;
+border-radius: 3px;
+margin: 20px auto 0 auto;
+}
+.container input[type=submit]:hover,
+.container input[type=button]:hover{
+background: #0e8798;
+cursor: pointer;
+color: #fff;
+text-align: center;
+}
+.submit-btn {
+    text-align: center;
+}
+
+
+
+
+
+@media screen  and (max-width: 750px ){
+    .container{
+        width: 90%;
+        top: 30px;
+
+    }
+    .container label{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container .year-number-field{
+        width: 40%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .container input.input-field, .container .select-field{
+        width: 90%;
+        margin-top: 10px;
+    }
+    .container label > span{
+            width: 70%;
+    }
+}

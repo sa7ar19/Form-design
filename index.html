@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/apel-logo.svg" />
+    <link rel="stylesheet" href="./styles.css">
+    <title>Form</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="form-heading">
+                <img src="./assets/images/apel-logo.svg" class="apel-logo">
+                <h2>التعلم .. البناء .. المشاركة</h2>
+            </div>
+            <form name="myForm" action="/action_page.php" method="post" onsubmit="return validateForm()">
+                <label><span><span class="required">*</span> أسم الفريق</span><input type="text" required class="input-field team-name" name="teamname" value="" /></label>
+                <label><span><span class="required">*</span> الأسم باللغة العربية</span><input type="text" required class="input-field arabic-name" name="arabname" value="" /></label>
+                <h5 class="feedback1">Arabic only!!</h5>
+                <label><span><span class="required">*</span> الأسم باللغة الإنجليزية</span><input type="text" required  class="input-field" name="engname" value="" /></label>
+                <h5 class="feedback2">English only!!</h5>
+                <label><span><span class="required">*</span> الإيميل</span><input type="email" class="input-field email-field"  required name="field3" value="" /></label>
+                <label><span><span class="required">*</span> رقم التليفون</span><input type="text" class="input-field"  required name="tel_no" pattern="[01].*" minlength="11" maxlength="11"/></label>
+                <label><span><span class="required">*</span> الرقم القومي</span><input type="text" class="input-field"  required name="textNID" minlength="14" maxlength="14"  /></label>
+                <label><span><span class="required">*</span> الكلية</span><input type="text" required  class="input-field" name="faculname" value="" /></label>
+                <label><span><span class="required">*</span> الجامعة</span>
+                    <select name="selectField" class="select-field" >
+                        <option value="Question">أختر من هنا...</option>
+                        <option value="Aswan">أسوان</option>
+                        <option value="Asuit">أسيوط</option>
+                        <option value="Cairo">القاهرة</option>
+                        <option value="Alexandria">الإسكندرية</option>
+                    </select>
+                </label>
+                <h5 class="feedback3">Please Select Your University!!</h5>
+                <label><span><span class="required">*</span> السنة الدراسية</span><input type="text"  required class="year-number-field" name="academicYear" value="" minlength="1" maxlength="1" /></label>
+                <h5 class="feedback4">Please Enter a Valid Academic Year!</h5>
+                <div class="submit-btn">
+                    <input type="submit" value="إرسال" class="btn">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
